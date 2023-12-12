@@ -9,11 +9,12 @@ function displayQuote(response) {
 
 function generateQuote(event) {
   event.preventDefault();
+
   let instructionsInput = document.querySelector("#user-instructions");
   let apiKey = "aa8be038534a124at608fo4af5b10b9a";
   let context =
-    "You are an inspirational quote expert and love to write short quotes. Your mission is to generate inspirational quotes in basic HTML. Make sure to follow the user instructions.";
-  let prompt = `User instructions are: Generate an inspirational quote about ${instructionsInput.value}`;
+    "You are an inspirational quote expert and love to write short quotes. Your mission is to generate one inspirational quote in basic HTML. Make sure to follow the user instructions.";
+  let prompt = `User instructions are: Generate one inspirational quote about ${instructionsInput.value}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   let quoteElement = document.querySelector("#quote");
